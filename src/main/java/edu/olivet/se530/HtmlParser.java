@@ -113,6 +113,9 @@ public class HtmlParser {
 				seller.setShippingState(array[0].trim());
 				seller.setShippingCountry(array[1].trim().replace(".", ""));
 			}
+			if (text.contains("Ships from United Kingdom")){
+				seller.setShippingCountry("United Kingdom");
+			}
 		}
 		return seller;
 	}
