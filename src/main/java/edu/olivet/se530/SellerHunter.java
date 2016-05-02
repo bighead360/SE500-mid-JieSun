@@ -16,9 +16,6 @@ public class SellerHunter {
 	@Inject private HtmlCrawler htmlFetcher;
 	@Inject private HtmlParser htmlParser;
 
-
-
-
 //	HtmlCrawlerImpl htmlFetcherReal = new HtmlCrawlerImpl();
 //	HtmlParser htmlParserReal = new HtmlParser();
 	/**
