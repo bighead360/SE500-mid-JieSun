@@ -15,8 +15,12 @@ import java.util.List;
 public class SellerHunter {
 	@Inject private HtmlCrawler htmlFetcher;
 	@Inject private HtmlParser htmlParser;
-	HtmlCrawlerImpl htmlFetcherReal = new HtmlCrawlerImpl();
-	HtmlParser htmlParserReal = new HtmlParser();
+
+
+
+
+//	HtmlCrawlerImpl htmlFetcherReal = new HtmlCrawlerImpl();
+//	HtmlParser htmlParserReal = new HtmlParser();
 	/**
 	 * 根据给定的isbn和condition，返回亚马逊网站上面的Offer列表
 	 * @param isbn		产品的ISBN编号，参见:{@link Product#getIsbn()}
@@ -24,10 +28,12 @@ public class SellerHunter {
 	 */
 	public Offer huntOffer(String isbn, String condition) throws IOException {
 
-		Document doc = htmlFetcherReal.getDocument(isbn, condition);
+		this.setHtmlFetcher(new HtmlCrawlerImpl());
+		this.setHtmlParser(new HtmlParser());
+		Document doc = htmlFetcher.getDocument(isbn, condition);
 
 
-		List<Offer> offers = htmlParserReal.parseOffer(doc);
+		List<Offer> offers = htmlParser.parseOffer(doc);
 		
 		for (Iterator<Offer> iterator = offers.iterator(); iterator.hasNext();) {
 			Offer offer = iterator.next();
