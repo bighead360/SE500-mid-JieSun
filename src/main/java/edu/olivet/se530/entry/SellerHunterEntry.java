@@ -1,9 +1,9 @@
 package edu.olivet.se530.entry;
 
-import java.io.IOException;
-
 import edu.olivet.se530.SellerHunter;
 import edu.olivet.se530.model.Offer;
+
+import java.io.IOException;
 
 /**
  * Seller猎手
@@ -13,7 +13,7 @@ class SellerHunterEntry {
 
 	public static void main(String[] args) throws IOException {
 		SellerHunter hunter = new SellerHunter();
-		Offer offer = hunter.huntOffer("031043601X", "New");
+		Offer offer = hunter.huntOffer("020161622X", "Used");
 		System.out.println(offer);
 	}	
 }

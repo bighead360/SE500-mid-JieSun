@@ -10,7 +10,8 @@ import com.google.common.collect.ComparisonChain;
 public class Offer implements Comparable<Offer> {
 	@Override
 	public String toString() {
-		return "Offer [seller=" + seller + ", product=" + product + ", condition=" + condition + ", price=" + price + ", shippingPrice="
+
+		return "Offer [seller=" + seller.getName() + ", product=" + product.getName() + ", condition=" + condition + ", price=" + price + ", shippingPrice="
 				+ shippingPrice + "]";
 	}
 

@@ -8,4 +8,6 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({ HtmlCrawlerTest.class, HtmlParserTest.class, SellerHunterTest.class })
 public class AllTests {
 
+
+
 }
