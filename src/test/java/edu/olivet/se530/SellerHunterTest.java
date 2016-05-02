@@ -20,7 +20,7 @@ public class SellerHunterTest {
     @Test public void test_get_offer_list() throws IOException {
         String condition = "NEW";
         String isbn = "0135157862";
-//       String isbn = "0751515736";
+//      String isbn = "0751515736";
         Offer offer = hunter.huntOffer(isbn, condition);
 		Assert.assertEquals("AP", offer.getSeller().getName());
 	}
