@@ -4,7 +4,11 @@ package edu.olivet.se530.assignment;
 import edu.olivet.se530.HtmlParser;
 import edu.olivet.se530.SellerHunter;
 import edu.olivet.se530.dummy.DummyHtmlCrawler;
+import edu.olivet.se530.dummy.DummyModule;
+import org.jukito.JukitoRunner;
+import org.jukito.UseModules;
 import org.junit.*;
+import org.junit.runner.RunWith;
 
 import java.io.IOException;
 
@@ -14,6 +18,8 @@ import java.io.IOException;
  * </pre>
  * <a href="mailto:nathanaelibport@gmail.com">Nathanael Yang</a> Jan 28, 2015 8:54:18 AM
  */
+@RunWith(JukitoRunner.class)
+@UseModules(value = DummyModule.class)
 public class TestSellerHunterAssignment {
 	private static SellerHunter sellerHunter;
 	

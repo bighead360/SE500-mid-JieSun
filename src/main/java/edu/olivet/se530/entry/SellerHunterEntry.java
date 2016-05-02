@@ -1,7 +1,9 @@
 package edu.olivet.se530.entry;
 
+import com.google.inject.Guice;
 import edu.olivet.se530.SellerHunter;
 import edu.olivet.se530.model.Offer;
+import edu.olivet.se530.modules.CrawlerModule;
 
 import java.io.IOException;
 
@@ -12,8 +14,11 @@ import java.io.IOException;
 
 class SellerHunterEntry {
 
+
+
 	public static void main(String[] args) throws IOException {
-		SellerHunter hunter = new SellerHunter();
+		SellerHunter hunter = Guice.createInjector(new CrawlerModule()).getInstance(SellerHunter.class);
+
 		Offer offer = hunter.huntOffer("020161622X", "Used");
 		System.out.println(offer);
 	}	

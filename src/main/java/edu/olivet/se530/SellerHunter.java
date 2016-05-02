@@ -12,6 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @Singleton
+
 public class SellerHunter {
 	@Inject private HtmlCrawler htmlFetcher;
 	@Inject private HtmlParser htmlParser;
