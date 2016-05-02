@@ -14,12 +14,9 @@ import java.io.IOException;
 
 class SellerHunterEntry {
 
-
-
 	public static void main(String[] args) throws IOException {
 		SellerHunter hunter = Guice.createInjector(new CrawlerModule()).getInstance(SellerHunter.class);
-
-		Offer offer = hunter.huntOffer("020161622X", "Used");
+        Offer offer = hunter.huntOffer("020161622X", "Used");
 		System.out.println(offer);
 	}	
 }
