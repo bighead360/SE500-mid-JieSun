@@ -58,7 +58,7 @@ public class HtmlParserTest {
 
 	@Test
 	public void testGetText() {
-		Assert.assertEquals("The Meaning of Sociology: A Reader (9th Edition) (Paperback)", htmlParser.getText(document, "#olpProductDetails > h1"));
+		Assert.assertEquals("New offers for The Meaning of Sociology: A Reader (9th Edition) (Paperback)", htmlParser.getText(document, "#olpProductDetails > h1"));
 		String rateString = htmlParser.getText(documentUsed, "#olpOfferList > div > div > div:nth-child(3) > div.a-column.a-span2.olpSellerColumn > p > a > b");
 		Assert.assertEquals(98, Integer.parseInt(rateString.replaceAll("[^0-9]", "")));
 //		Assert.assertEquals("Amazon Prime TM", htmlParser.getText(document, "#olpTabContent > div > div.a-section.a-spacing-double-large > div:nth-child(7) > div:nth-child(1) > span.supersaver > i"));
