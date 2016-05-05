@@ -72,8 +72,7 @@ public class HtmlParser {
 	Seller parseSeller(Element row) {
 		Seller seller = new Seller();
 		String sellerNameSelector = ".olpSellerName";
-		//old version
-		//String sellerNameSelector = "olpSellerName";
+
         String link = "www.amazon.com";
 
         if(row.select(sellerNameSelector).text().length() != 0){

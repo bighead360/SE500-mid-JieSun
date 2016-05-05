@@ -31,11 +31,11 @@ public class HtmlParserTest {
 	
 	@Test public void test_parse_seller() {
 		Seller seller = htmlParser.parseSeller(document.select("div.a-row.a-spacing-mini.olpOffer").get(3));
-		Assert.assertEquals("allnewbooks", seller.getName());
-		Assert.assertEquals("A1KIF2Y9A1PQYE", seller.getUuid());
-		Assert.assertEquals(91, seller.getRating());
-		Assert.assertEquals(235768 , seller.getRatingCount());
-		Assert.assertEquals("NJ", seller.getShippingState());
+		Assert.assertEquals("Maria Pelagio", seller.getName());
+		Assert.assertEquals("ANSJJXK5BX8ET", seller.getUuid());
+		Assert.assertEquals(100, seller.getRating());
+		Assert.assertEquals(1 , seller.getRatingCount());
+		Assert.assertEquals("CA", seller.getShippingState());
 		Assert.assertEquals("United States", seller.getShippingCountry());
 //		Assert.assertTrue(seller.isExpeditedShippingAvailable());
 //		Assert.assertTrue(seller.isIntlShippingAvailable());
