@@ -51,8 +51,8 @@ public class HtmlParserTest {
 
 		List<Offer> offers = htmlParser.parseOffer(document);
 
-		Assert.assertTrue(53.60f == offers.get(0).getPrice());
-		Assert.assertTrue(0.0f == offers.get(0).getShippingPrice());
+		Assert.assertTrue(49.52f == offers.get(0).getPrice());
+		Assert.assertTrue(0.00f == offers.get(0).getShippingPrice());
 		Assert.assertTrue(3.99f == offers.get(1).getShippingPrice());
 	}
 
